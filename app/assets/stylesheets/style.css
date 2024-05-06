@@ -1,0 +1,7 @@
+.navbar-fixa {
+    position: -webkit-sticky; /* Para navegadores WebKit como Chrome e Safari */
+    position: sticky; /* Para navegadores modernos */
+    top: 0; /* Define a posição inicial da navbar no topo da janela */
+    z-index: 1000; /* Para garantir que a navbar fique sempre na frente de outros elementos */
+  }
+  
