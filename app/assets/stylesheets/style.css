@@ -1,12 +1,63 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+/* Aplicação da fonte ao corpo da página */
+body {
+  font-family: 'Merienda', sans-serif;
+}
+
+#bem-vindo{
+  font-family: 'Merienda', sans-serif;
+}
+
+#btn-comecar{
+  font-family: 'Merienda', sans-serif;
+}
+
+
 .navbar-fixa {
     position: -webkit-sticky; /* Para navegadores WebKit como Chrome e Safari */
     position: sticky; /* Para navegadores modernos */
     top: 0; /* Define a posição inicial da navbar no topo da janela */
-    z-index: 1000; /* Para garantir que a navbar fique sempre na frente de outros elementos */
-    background-color: #d5e0c8;
+    z-index: 9999999999; /* Para garantir que a navbar fique sempre na frente de outros elementos */
+    background-color:#cddfcd;
     border-radius: 20px;
   }
 
 #espaco {
-  width: 200px;
+  width: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a73737;
+  border-radius: 6px;
+  border: 3px solid transparent;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #b14e4e;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f0f0f0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b84242;
+  border-radius: 6px;
+  border: 3px solid #f0f0f0;
 }
