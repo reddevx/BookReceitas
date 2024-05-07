@@ -20,7 +20,7 @@ body {
     position: sticky; /* Para navegadores modernos */
     top: 0; /* Define a posição inicial da navbar no topo da janela */
     z-index: 9999999999; /* Para garantir que a navbar fique sempre na frente de outros elementos */
-    background-color:#cddfcd;
+    background-color:#fbe8fd;
     border-radius: 20px;
   }
 
