@@ -1,16 +1,16 @@
 <section class="container p-1">
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-danger">Minhas Receitas</h1>
+<h1 class="text-danger title">Minhas Receitas</h1>
 
-<div id="recipes">
+<div id="recipes" class="text-md-start">
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
+      <%= link_to "Show this recipe", recipe, class: 'btn btn-outline-danger' %>
+    
+      <%= link_to "Nova Receita", new_recipe_path, class: 'btn btn-outline-success' %>
+      </p>
   <% end %>
 </div>
-
-<%= link_to "New recipe", new_recipe_path %>
 </section>

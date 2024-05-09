@@ -1,21 +1,29 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Title:</strong>
-    <%= recipe.title %>
+<div class="container p-1" id="<%= dom_id(recipe) %>">
+  <p class="text-justify mb-0">
+  <p style="font-size: 45px; color: #red; line-height: 1.5;  font-family: 'Merienda', sans-serif;">
+  <%= recipe.title %>
+  </p>
+</p>
   </p>
 
-  <p>
-    <strong>Description:</strong>
+  <p class="text-justify">
+  <p class="text-danger h5 text-justify">
+    <strong>Descrição:</strong>
+    </p>
     <%= recipe.description %>
   </p>
 
-  <p>
-    <strong>Ingredients:</strong>
+  <p class="text-justify">
+  <p class="text-danger h5 text-justify">
+    <strong>Igredientes:</strong>
+    </p>
     <%= recipe.ingredients %>
   </p>
 
-  <p>
-    <strong>Instructions:</strong>
+  <p class="text-justify">
+  <p class="text-danger h5 text-justify">
+    <strong>Instruções:</strong>
+    </p>
     <%= recipe.instructions %>
   </p>
 
