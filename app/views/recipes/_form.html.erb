@@ -1,37 +1,39 @@
-<%= form_with(model: recipe) do |form| %>
+<div class="container">
+<%= form_with(model: recipe, class: "mt-4") do |form| %>
   <% if recipe.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
       <ul>
-        <% recipe.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% recipe.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :ingredients, style: "display: block" %>
-    <%= form.text_area :ingredients %>
+  <div class="form-group">
+    <%= form.label :ingredients %>
+    <%= form.text_area :ingredients, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :instructions, style: "display: block" %>
-    <%= form.text_area :instructions %>
+  <div class="form-group">
+    <%= form.label :instructions %>
+    <%= form.text_area :instructions, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Salvar Alterações", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>

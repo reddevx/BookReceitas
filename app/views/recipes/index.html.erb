@@ -7,10 +7,11 @@
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
-      <%= link_to "Show this recipe", recipe, class: 'btn btn-outline-danger' %>
+      <%= link_to "Ver esta Receita", recipe, class: 'btn btn-outline-danger' %>
     
-      <%= link_to "Nova Receita", new_recipe_path, class: 'btn btn-outline-success' %>
+     
       </p>
   <% end %>
+  <%= link_to "Nova Receita", new_recipe_path, class: 'btn btn-outline-success' %>
 </div>
 </section>
