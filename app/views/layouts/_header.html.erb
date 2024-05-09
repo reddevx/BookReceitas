@@ -18,28 +18,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    
+      
       <p class="text-danger p-1">
-      <%= link_to 'Home', root_path  %>
+      <%= link_to 'Home', root_path, class: 'black-link' %>
+    </p>
+    
+
       </p>
 
-
-
       <p class="text-danger p-1">
-      <%= link_to 'Receitas', recipes_path  %>
+      <%= link_to 'Receitas', recipes_path, class: 'black-link'  %>
       </p>
 
         
 
         <li class="nav-item">
         <p class="text-danger p-1">
-        <%= link_to 'Sobre', sobre_path %>
+        <%= link_to 'Sobre', sobre_path, class: 'black-link' %>
         </p>
         </li>
         
         <li class="nav-item">
      <p class="text-danger p-1">
-        <%= link_to 'Contato', contato_path  %>
+        <%= link_to 'Contato', contato_path, class: 'black-link'  %>
      </p>
         </ul>
       

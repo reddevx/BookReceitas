@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :recipes
-
-get 'recipes', to: "recipes#recipes"
+  get 'recipes', to: "recipes#recipes"
 
   root to: "staticpages#index"
 
@@ -10,4 +8,7 @@ get 'recipes', to: "recipes#recipes"
 
   get 'contato', to: "staticpages#contato"
 
+  resources :recipes
+
+  resources :users, only: [:new, :create]
 end
