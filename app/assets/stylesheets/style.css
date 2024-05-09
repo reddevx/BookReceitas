@@ -65,6 +65,13 @@ body::-webkit-scrollbar-thumb {
 
 .white-link {
   color: white;
+  padding: 10px;
+  font-family: 'Merienda', sans-serif;
+}
+
+.white-link:hover{
+  color: antiquewhite;
+  text-decoration: none;
 }
 
 .black-link {
