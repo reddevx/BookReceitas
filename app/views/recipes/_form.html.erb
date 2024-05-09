@@ -1,8 +1,7 @@
-<div class="container">
 <%= form_with(model: recipe, class: "mt-4") do |form| %>
   <% if recipe.errors.any? %>
     <div class="alert alert-danger">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <h2><%= pluralize(recipe.errors.count, "error") %> impediram que esta receita fosse salva:</h2>
 
       <ul>
         <% recipe.errors.full_messages.each do |error| %>
@@ -13,27 +12,33 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :title %>
+    <%= form.label :title, class: "text-md-start" %>
     <%= form.text_field :title, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :description %>
+    <%= form.label :description, class: "text-md-start" %>
     <%= form.text_area :description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :ingredients %>
+    <%= form.label :ingredients, class: "text-md-start" %>
     <%= form.text_area :ingredients, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :instructions %>
+    <%= form.label :instructions, class: "text-md-start" %>
     <%= form.text_area :instructions, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group text-md-start">
     <%= form.submit "Salvar Alterações", class: "btn btn-primary" %>
   </div>
 <% end %>
-</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
