@@ -22,24 +22,23 @@ O Goshi GO é um projeto em desenvolvimento que visa a catalogação de fotos e 
 Instale o projeto com o Git
 
 ```bash
-  git clone https://github.com/reddevx/GoshiGo.git
+  git clone [https://github.com/reddevx/GoshiGo.git](https://github.com/reddevx/BookReceitas)
 
 ```
-Logo após coloque o arquivo .rar no Xampp ou USBWebServer e inicie o apache.
     
 ## Stack utilizada
 
-**Front-end:** HTML5, CSS3 e Bootstrap
+**Front-end:** HTML5, CSS3 & Bootstrap
 
-**Back-end:** PHP
+**Back-end:** Ruby & Ruby on Rails
 
-**Banco de dados:** Mysql
+**Banco de dados:** Postgresql
 
 
 ## Funcionalidades
 
-- Cadastro de usuário e Cadastro de Animais
-- Modo tela cheia
+- Cadastro de usuário e autenticação de usuários
+- Cadastro, Edição e exclusão de novas receitas
 - Multiplataforma & Responsividade
 
 
@@ -53,7 +52,6 @@ Logo após coloque o arquivo .rar no Xampp ou USBWebServer e inicie o apache.
 ## Roadmap
 
 - Melhorar o suporte de navegadores
-
 - Adicionar mais integrações
 
 
@@ -65,11 +63,6 @@ Para suporte, mande um email para desenvolvedor.juan.business@gmail.com .
 ## Feedback
 
 Se você tiver algum feedback, por favor nos deixe saber por meio de desenvolvedor.juan.business@gmail.com 
-
-
-## Demonstração
-
-https://anidex-animals.000webhostapp.com/
 
 ## Autores
 
