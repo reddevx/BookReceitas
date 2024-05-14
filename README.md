@@ -10,7 +10,10 @@ O Goshi GO é um projeto em desenvolvimento que visa a catalogação de fotos e 
 
 <center>
 
-<img src="https://github.com/reddevx/GoshiGo/blob/main/imagem/image.png">
+<img src="https://raw.githubusercontent.com/reddevx/BookReceitas/main/app/assets/images/print%201.png">
+
+<img src="https://raw.githubusercontent.com/reddevx/BookReceitas/main/app/assets/images/print%202.png">
+
 
 </center>
 
