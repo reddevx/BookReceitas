@@ -4,8 +4,8 @@
 <%= render @recipe %>
 
 <div class="container p-1 text-center row">
-  <%= link_to "Editar Receita", edit_recipe_path(@recipe), class: 'btn btn-outline-primary' %> 
-  <%= link_to "Voltar para Receitas", recipes_path,  class: 'btn btn-outline-success'  %>
-  <%= button_to "Excluir", @recipe, method: :delete, class: 'btn btn-outline-danger' %>
+  <%= link_to "Editar Receita", edit_recipe_path(@recipe), class: 'btn btn-outline-primary p-1' %> 
+  <%= link_to "Voltar para Receitas", recipes_path,  class: 'btn btn-outline-success p-1'  %>
+  <%= button_to "Excluir", @recipe, method: :delete, class: 'btn btn-outline-danger p-1' %>
 </div>
 </section>
