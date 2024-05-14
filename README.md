@@ -1,10 +1,9 @@
 
 <img src="https://raw.githubusercontent.com/reddevx/BookReceitas/main/app/assets/images/br.png">
 
-O Goshi GO é um projeto em desenvolvimento que visa a catalogação de fotos e informações de animais exóticos avistados. 
+# BookReceitas
 
- Este aplicativo serve como uma plataforma de armazenamento dedicada à preservação do conhecimento sobre essas espécies raras, oferecendo uma maneira organizada e acessível para os entusiastas e especialistas compartilharem e explorarem avistamentos e informações relevantes.
-
+O BookReceitas é um site desenvolvido em Ruby on Rails, onde os usuários podem criar uma conta, fazer login, cadastrar suas receitas, editá-las e compartilhá-las com outros usuários. A ideia é proporcionar uma experiência intuitiva e prática para todos os amantes da culinária!
 
 ## Imagens
 
