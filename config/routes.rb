@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
 
   resources :recipes
 
@@ -12,6 +13,10 @@ Rails.application.routes.draw do
   
   resources :users
 
+  get 'entrar',   to: 'sessions#new'
+  post 'entrar',  to: 'sessions#create'
+
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy, :show]
 
 end
