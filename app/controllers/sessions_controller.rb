@@ -18,8 +18,6 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     flash[:warning] = 'Logout realizado com sucesso'
-    redirect_to entrar_path
+    redirect_to cadastro_path
   end
-
-
 end

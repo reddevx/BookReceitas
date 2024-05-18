@@ -1,22 +1,24 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
+  
+  root to: "staticpages#index"
   resources :recipes
 
   get 'recipes', to: "recipes#recipes"
 
-  root to: "staticpages#index"
-
   get 'sobre', to: "staticpages#sobre"
-
   get 'contato', to: "staticpages#contato"
   
-  resources :users
 
-  get 'entrar',   to: 'sessions#new'
-  post 'entrar',  to: 'sessions#create'
+ get 'entrar', to: 'sessions#new', as: 'entrar'
+ post 'entrar', to: 'sessions#create'
+ get 'sair', to: 'sessions#destroy'
+ get 'cadastro', to: 'users#new', as: 'cadastro' 
+ get 'sessions/new'
 
-  resources :users, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy, :show]
+resources :users
 
+  resources :users, only: [:show, :new, :create, :edit, :update] do
+    resources :recipes, only: [:index, :new, :create, :edit, :update, :destroy]
+  end
+  resources :sessions, only: [:new, :create, :destroy]
 end

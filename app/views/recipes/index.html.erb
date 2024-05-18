@@ -2,16 +2,12 @@
 <p style="color: green"><%= notice %></p>
 
 <h1 class="text-danger title">Minhas Receitas</h1>
-
-<img src="assets/food.svg" class="img-fluid col-4">
-
+<h1> Olá <%= current_user.name %> </h1>
 <div id="recipes" class="text-md-start">
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
       <%= link_to "Ver esta Receita", recipe, class: 'btn btn-outline-danger' %>
-    
-     
       </p>
   <% end %>
   <center>

@@ -10,37 +10,49 @@
 <nav class="navbar bg-muted navbar-expand-lg" style=" box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.2);">
   <div class="container-fluid">
 
+  
     <a class="navbar-brand" href="#">
-    <%= image_tag("logo.png", style: "max-width: 80px; max-height: 200px;") %>
+    <%= image_tag("logo.png", style: "max-width: 70px; max-height: 180px;") %>
     </a>
-      
-      <p class="text-danger p-1">
-      <%= link_to 'Home', root_path, class: 'black-link' %>
-      </p>
+
+      <%= link_to 'Home', root_path, class: 'black-link text-decoration-none text-md-start p-1 ' %>
     
+        <%= link_to 'Sobre', sobre_path, class: 'black-link text-decoration-none p-1' %>
+   
+        <%= link_to 'Contato', contato_path, class: 'black-link text-decoration-none p-1'  %>
+        <% if !user_signed_in? %>
 
-      </p>
+        <%= link_to 'Entrar', entrar_path, class: 'btn btn-danger' %>
+       
+      <% if !user_signed_in? %>
+    
+        <%= link_to 'Nova Conta', cadastro_path, class: 'btn btn-outline-danger' %>
+       <% end %>
+       
+        <% else %>
 
-      <p class="text-danger p-1">
-      <%= link_to 'Receitas', recipes_path, class: 'black-link'  %>
-      </p>
 
-        
+  <div id="espaco">
+  
+  </div>
+  <div class="dropdown">
+  <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  bem vindo, <%= current_user.name %> <span class="caret"></span>
+  </button>
 
-     
-        <p class="text-danger p-1">
-        <%= link_to 'Sobre', sobre_path, class: 'black-link' %>
-        </p>
-     
-     <p class="text-danger p-1 decoration-none">
-        <%= link_to 'Contato', contato_path, class: 'black-link decoration-none'  %>
-     </p>
-      
-      <div id="espaco">
-      </div>
-      <form class="d-flex d-none d-lg-block" role="search">
-      <%= link_to 'Cadastrar', new_user_path, class: 'black-link decoration-none btn btn-outline-danger'  %>
-      </form>   
+  <ul class="dropdown-menu dropdown-menu border border-danger p-1">
+    <li>
+    <%= link_to 'Receitas', recipes_path(current_user), class: 'text-primary text-decoration-none' %>
+    </li>
+    <li>
+    <%= link_to 'Editar', edit_user_path(current_user), class: 'text-primary text-decoration-none' %>
+    </li>
+    <li>
+    <%= link_to 'Sair', sair_path, method: :delete %>
+    </li>
+  </ul>
+</div>
+<% end %>       
   </div>
 </nav>
 </div>
