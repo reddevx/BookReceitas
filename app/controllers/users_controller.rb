@@ -1,17 +1,22 @@
 class UsersController < ApplicationController
-    def create
-      @user = User.new(user_params)
-      if @user.save
-        redirect_to root_url, notice: 'User was successfully created.'
-      else
-        render :new
-      end
+    def new
+      @user = User.new
     end
   
-    private
-  
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+   
+  def create
+    @user = User.create(user_params)
+    if @user.save
+      flash[:success] = 'Cadastro realizado com sucesso'
+      redirect_to root_url
+      else  flash.now[:error] = @user.errors.full_messages.to_sentence
+      render 'new'
     end
   end
   
+    private
+      def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      end
+  
+  end
